@@ -103,11 +103,11 @@ export default function Bestseling({ params }) {
               {e.name}
             </h1>
             <p>{e.description}</p>
-            <p>
+            <p className="flex flex-row flex-wrap">
               Size:
               {e.size.map((e, i) => (
                 <span
-                  className="mx-1 bg-black text-white text-center rounded-sm hover:opacity-50"
+                  className=" mx-0.5 bg-black text-white text-center rounded-sm hover:opacity-50"
                   key={i}
                 >
                   {e}
