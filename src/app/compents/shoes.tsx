@@ -20,7 +20,9 @@ export default function Shoes() {
   const invisable = useRef(null);
   function filter1() {
     const ll = data.filter((e) => {
-      return e.size.includes(`${size.current.value}`);
+      if((size.current && size.current.value)){
+        return e.size.includes(`${size.current.value}`);
+      }
     });
     console.log(ll);
     setdata(ll);
