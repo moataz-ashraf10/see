@@ -26,26 +26,20 @@ const caudex = Caudex({
   weight: ["700"],
 });
 
-export default function Bestseling({params}) {
-  const pp2 = useRef([]);
-  function showbest() {
-    if (window.scrollY > 320) {
-      pp2.current.forEach((e) => {
-        e.classList.add("animation2");
-        e.classList.remove("invisible");
-      });
-    }
-  } 
-  window.addEventListener("scroll", () => showbest());
+export default function Bestseling({ params }) {
+  const pp2 = useRef(null);
+  // function showbest() {
+  //   if (window.scrollY > 320) {
+  //     pp2.current.classList.add("animation2")
+  //     pp2.current.classList.remove("invisible")
+
+  //   }
+  // }
+  // window.addEventListener("scroll", () => showbest())
   let card = bestselling.map((e, i) => {
     return (
       <>
-        <Link
-          ref={(el) => (pp2.current[i] = el)}
-          className=" invisible"
-          href={e.href}
-          key={i}
-        >
+        <Link className="" href={e.href} key={i}>
           <div className="w-4/5 border-solid border-2 mx-auto border-[black]">
             <Swiper
               className="w-full"
@@ -130,7 +124,10 @@ export default function Bestseling({params}) {
         </h1>
         <div className="text-3xl my-4 w-1/2 text-center h-1 mx-auto bg-[black]"></div>
         <div className="">
-          <ul className="grid grid-cols-2 md:grid-cols-3 gap-y-3 lg:grid-cols-4 xl:grid-cols-5">
+          <ul
+            ref={pp2}
+            className="grid opacity-0 animation2 grid-cols-2 md:grid-cols-3 gap-y-3 lg:grid-cols-4 xl:grid-cols-5"
+          >
             {card}
           </ul>
         </div>
