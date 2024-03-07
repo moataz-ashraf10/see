@@ -23,7 +23,7 @@ export default function Shoespage({ params }) {
   const home = useRouter();
   let ll = bestselling[id].size.map((e) => {
     return (
-      <span className="mx-2 bg-black p-1 hover:opacity-50  cursor-default text-white">
+      <span key={id} className="mx-2 bg-black p-1 hover:opacity-50  cursor-default text-white">
         {e}
       </span>
     );
