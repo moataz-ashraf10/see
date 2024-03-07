@@ -55,7 +55,7 @@ export default function Shoes() {
   function filter2() {
     // console.log(to.current.value, form.current.value);
     const ll = bestselling.filter((e) => {
-      if(to.current){
+      if(to.current && form.current){
         return parseInt(to.current.value) >= parseInt(e.price);
       }
     });
