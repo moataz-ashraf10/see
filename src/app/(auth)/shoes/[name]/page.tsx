@@ -16,7 +16,7 @@ const caudex = Caudex({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
-export default function Shoespage({ params }) {
+export default function Shoespage({ params }:any) {
   let id = bestselling.findIndex((e) => e.name == params.name);
   const [bigimage, setbigimage] = useState(bestselling[id].photo);
   const bigref = useRef(null);
