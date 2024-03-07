@@ -45,8 +45,8 @@ export default function Shoes() {
   const invisable = useRef(null);
   function filter1() {
     const ll = data.filter((e) => {
-      if(size.current){
-      return e.size.includes(`${size.current.value}`);
+      if (size.current) {
+        return e.size.includes(`${size.current.value}`);
       }
     });
     console.log(ll);
@@ -55,7 +55,7 @@ export default function Shoes() {
   function filter2() {
     // console.log(to.current.value, form.current.value);
     const ll = bestselling.filter((e) => {
-      if(to.current && form.current){
+      if (to.current && form.current) {
         return parseInt(to.current.value) >= parseInt(e.price);
       }
     });
@@ -79,7 +79,7 @@ export default function Shoes() {
           href={e.href}
           key={i}
         >
-          <div className="w-4/5 border-solid border-2 mx-auto border-[black]">
+          <div className="w-4/5 animation2 border-solid border-2 mx-auto border-[black]">
             <Swiper
               className="w-full"
               // install Swiper modules
