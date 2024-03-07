@@ -136,7 +136,7 @@ export default function Shoes() {
               {e.name}
             </h1>
             <p>{e.description}</p>
-            <p>
+            <p className="flex flex-row flex-wrap">
               Size:
               {e.size.map((e, i) => (
                 <span
