@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(auth)/shoes/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/(auth)/shoes/page.jsx", "src/app/compents/about.jsx", "src/app/compents/best.jsx", "src/app/compents/footer.jsx", "src/app/compents/header.jsx", "src/app/compents/shoes.jsx", "src/app/compents/swiper.jsx"],
   "exclude": ["node_modules"]
 }
