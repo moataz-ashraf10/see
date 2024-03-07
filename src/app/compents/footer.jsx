@@ -30,7 +30,7 @@ let icon = icons.map((e, i) => {
   );
 });
 export default function Footer() {
-  const pagename: string = usePathname();
+  const pagename = usePathname();
   let [state, setstate] = useState(true);
   useEffect(() => {
     if (pagename == "/signin" || pagename == "/signup") {

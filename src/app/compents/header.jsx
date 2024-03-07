@@ -40,7 +40,7 @@ export default function Header() {
       e.classList.remove("jo");
     });
   }
-  let pagename: string = usePathname();
+  let pagename = usePathname();
   let ll = links.map((e, i) => {
     return (
       <Link
