@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.animation {
+  animation-name: shop-animation;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+.jo {
+  position: relative;
+  top: 0px;
+}
+.jo::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100vh;
+  rotate: 90deg;
+  background-color: gold;
+  top: -300px;
+}
+@keyframes shop-animation {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 10px);
+  }
+  50% {
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+.ll {
+  z-index: 100;
+}
+.swiper-pagination-bullet {
+  width: 20px !important;
+  height: 2px !important;
+  border-radius: 10px !important;
+  background-color: rgb(232, 243, 243) !important;
+}
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #000000;
+  border-radius: 100px;
+}
+.line {
+  position: relative;
+}
+.line::after {
+  content: "";
+  position: absolute;
+  width: 37vw;
+  height: 5px;
+  background-color: white;
+  top: 20px;
+  left: 2px;
+  border-radius: 5px;
+}
+.line::before {
+  content: "";
+  position: absolute;
+  width: 37vw;
+  height: 5px;
+  background-color: white;
+  top: 20px;
+  right: 2px;
+  border-radius: 5px;
+}
+html,
+body {
+  overflow-x: hidden;
+}
+.animation2 {
+  animation-name: shopanimation;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+@keyframes shopanimation {
+  0% {
+    opacity: 0;
+    transform: translate(0px, 7px);
+  }
+  50% {
+    /* transform: translate(0px, 3px); */
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
+.h {
+  height: 78vh;
+}
+.loading {
+  display: flex;
+  width: 100%;
+  height: 100vb;
+  justify-content: center;
+  align-items: center;
+}
+.loading div {
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.loading div:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading div:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes loading {
+  to {
+    opacity: 0.2;
+    transform: translate(0, -20px);
+  }
+}
+.fullh {
+  height: 100vh;
+}
+.d {
+  z-index: 0;
+}
+.cl-headerTitle {
+  color: aqua;
+}
+.cl-internal-b3fm6y {
+  display: none;
+}
+.cl-internal-1vbdq0x {
+  color: black;
+  font-family: "Dancing Script";
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+}
+.cl-internal-1fsg6zy {
+  background-color: black;
+  transition: all 0.5s ease-in-out;
+  color: white;
+}
+.cl-internal-1fsg6zy:hover {
+  background-color: white;
+  color: black;
+}
+.cl-internal-mdg29y {
+  color: gold;
+  font-size: 20px;
+  font-weight: bold;
+}
+.cl-internal-mdg29y:focus {
+  border-color: black;
+}
+.cl-internal-1xpzc82 {
+  text-align: center;
+  font-size: larger;
+  margin: 0 auto;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
