@@ -45,15 +45,19 @@ export default function Shoes() {
   const invisable = useRef(null);
   function filter1() {
     const ll = data.filter((e) => {
+      if(size.current){
       return e.size.includes(`${size.current.value}`);
+      }
     });
     console.log(ll);
     setdata(ll);
   }
   function filter2() {
-    console.log(to.current.value, form.current.value);
+    // console.log(to.current.value, form.current.value);
     const ll = bestselling.filter((e) => {
-      return parseInt(to.current.value) >= parseInt(e.price);
+      if(to.current){
+        return parseInt(to.current.value) >= parseInt(e.price);
+      }
     });
     console.log(ll);
     setdata(ll);
